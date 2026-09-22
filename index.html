@@ -6,20 +6,22 @@
 
     <title>Sai Manogna Potluri | QA Automation Engineer</title>
 
-    <meta
-        name="description"
-        content="Sai Manogna Potluri - QA Automation Engineer specializing in Playwright, TypeScript, Selenium, API Testing and CI/CD."
-    >
-
     <style>
-        /* =========================
-           GLOBAL
-        ========================= */
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Playfair+Display:wght@500;600&display=swap');
+
+        :root {
+            --background: #f7f7f2;
+            --text: #202522;
+            --muted: #69736b;
+            --accent: #315c50;
+            --border: #d9ddd6;
+            --light: #eef0ea;
+        }
 
         * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
         }
 
         html {
@@ -27,1259 +29,749 @@
         }
 
         body {
-            font-family:
-                -apple-system,
-                BlinkMacSystemFont,
-                "Segoe UI",
-                Roboto,
-                Helvetica,
-                Arial,
-                sans-serif;
-
-            background: #ffffff;
-            color: #1f2937;
+            background: var(--background);
+            color: var(--text);
+            font-family: "DM Sans", sans-serif;
             line-height: 1.7;
         }
 
         a {
-            text-decoration: none;
             color: inherit;
+            text-decoration: none;
         }
 
         .container {
-            width: min(1100px, 90%);
+            width: min(920px, 88%);
             margin: 0 auto;
         }
 
-
-        /* =========================
-           NAVIGATION
-        ========================= */
+        /* Navigation */
 
         nav {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-
-            background: rgba(255, 255, 255, 0.96);
-            border-bottom: 1px solid #e5e7eb;
-
-            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            padding: 24px 0;
         }
 
-        .nav-container {
-            height: 72px;
-
+        .nav-inner {
             display: flex;
-            align-items: center;
             justify-content: space-between;
+            align-items: center;
         }
 
         .logo {
-            font-size: 1.15rem;
-            font-weight: 700;
-            color: #111827;
+            font-weight: 500;
+            letter-spacing: 0.02em;
         }
 
         .nav-links {
             display: flex;
             gap: 28px;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: #4b5563;
-            font-size: 0.95rem;
-            transition: color 0.2s ease;
+            font-size: 14px;
+            color: var(--muted);
         }
 
         .nav-links a:hover {
-            color: #2563eb;
+            color: var(--accent);
         }
 
-
-        /* =========================
-           HERO
-        ========================= */
+        /* Hero */
 
         .hero {
-            padding: 120px 0 100px;
-            background: #ffffff;
+            padding: 110px 0 80px;
         }
 
-        .hero-content {
-            max-width: 850px;
-        }
-
-        .hero-label {
-            color: #2563eb;
-            font-size: 0.85rem;
-            font-weight: 700;
-            letter-spacing: 2px;
+        .eyebrow {
+            color: var(--accent);
+            font-size: 13px;
+            letter-spacing: 0.18em;
             text-transform: uppercase;
-            margin-bottom: 15px;
+            margin-bottom: 28px;
         }
 
-        .hero h1 {
-            font-size: clamp(3rem, 7vw, 5rem);
-            line-height: 1.05;
-            color: #111827;
-            margin-bottom: 20px;
-            letter-spacing: -2px;
-        }
-
-        .hero h2 {
-            font-size: clamp(1.4rem, 3vw, 2rem);
+        h1 {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(58px, 9vw, 100px);
             font-weight: 500;
-            color: #4b5563;
-            margin-bottom: 25px;
+            line-height: 0.98;
+            letter-spacing: -0.04em;
+            max-width: 800px;
         }
 
-        .hero-description {
-            max-width: 760px;
-            font-size: 1.08rem;
-            color: #6b7280;
-            margin-bottom: 32px;
+        .role {
+            font-family: "Playfair Display", serif;
+            font-size: 25px;
+            font-style: italic;
+            color: var(--muted);
+            margin-top: 28px;
         }
 
-        .hero-buttons {
-            display: flex;
-            gap: 14px;
-            flex-wrap: wrap;
+        .location {
+            margin-top: 14px;
+            color: var(--muted);
+            font-size: 15px;
         }
 
-        .button {
-            display: inline-block;
-            padding: 11px 21px;
-
-            border-radius: 7px;
-
-            font-weight: 600;
-            font-size: 0.95rem;
-
-            transition: all 0.2s ease;
+        .intro {
+            max-width: 720px;
+            margin-top: 55px;
+            padding-left: 24px;
+            border-left: 2px solid #dce5df;
+            font-family: "Playfair Display", serif;
+            font-size: 21px;
+            line-height: 1.65;
         }
 
-        .button-primary {
-            background: #2563eb;
-            color: #ffffff;
-            border: 1px solid #2563eb;
-        }
+        /* Stats */
 
-        .button-primary:hover {
-            background: #1d4ed8;
-            border-color: #1d4ed8;
-        }
-
-        .button-secondary {
-            background: #ffffff;
-            color: #374151;
-            border: 1px solid #d1d5db;
-        }
-
-        .button-secondary:hover {
-            border-color: #2563eb;
-            color: #2563eb;
-        }
-
-
-        /* =========================
-           QUICK FACTS
-        ========================= */
-
-        .quick-facts {
-            border-top: 1px solid #e5e7eb;
-            border-bottom: 1px solid #e5e7eb;
-            padding: 28px 0;
-        }
-
-        .facts-grid {
+        .stats {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(3, 1fr);
+            border: 1px solid var(--border);
+            margin: 20px 0 110px;
         }
 
-        .fact {
-            padding: 10px 25px;
-            border-right: 1px solid #e5e7eb;
+        .stat {
+            padding: 25px;
+            text-align: center;
+            border-right: 1px solid var(--border);
         }
 
-        .fact:first-child {
-            padding-left: 0;
-        }
-
-        .fact:last-child {
+        .stat:last-child {
             border-right: none;
         }
 
-        .fact-number {
+        .stat-label {
             display: block;
-            color: #111827;
-            font-size: 1.3rem;
-            font-weight: 700;
-            margin-bottom: 3px;
+            color: var(--muted);
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            margin-bottom: 8px;
         }
 
-        .fact-label {
-            color: #6b7280;
-            font-size: 0.9rem;
+        .stat-value {
+            font-family: "Playfair Display", serif;
+            font-size: 23px;
         }
 
-
-        /* =========================
-           SECTIONS
-        ========================= */
+        /* Sections */
 
         section {
             padding: 90px 0;
+            border-top: 1px solid var(--border);
         }
 
         .section-label {
-            color: #2563eb;
-            font-size: 0.78rem;
-            font-weight: 700;
-            letter-spacing: 2px;
+            color: var(--accent);
+            font-size: 12px;
+            letter-spacing: 0.16em;
             text-transform: uppercase;
-            margin-bottom: 7px;
-        }
-
-        .section-title {
-            color: #111827;
-            font-size: 2.1rem;
-            line-height: 1.2;
             margin-bottom: 35px;
         }
 
-        .section-intro {
-            color: #6b7280;
-            max-width: 760px;
-            margin-bottom: 40px;
+        .section-title {
+            font-family: "Playfair Display", serif;
+            font-size: 46px;
+            font-weight: 500;
+            margin-bottom: 30px;
         }
 
-
-        /* =========================
-           ABOUT
-        ========================= */
-
-        .about {
-            background: #f9fafb;
+        .section-text {
+            max-width: 720px;
+            color: #4f5851;
+            font-size: 17px;
         }
 
-        .about-content {
-            max-width: 850px;
-        }
-
-        .about-content p {
-            color: #4b5563;
-            font-size: 1.02rem;
-            margin-bottom: 18px;
-        }
-
-
-        /* =========================
-           EXPERIENCE
-        ========================= */
+        /* Experience */
 
         .experience-item {
+            padding: 32px 0;
+            border-top: 1px solid var(--border);
             display: grid;
-            grid-template-columns: 220px 1fr;
-            gap: 45px;
-
-            padding: 35px 0;
-
-            border-top: 1px solid #e5e7eb;
+            grid-template-columns: 180px 1fr;
+            gap: 40px;
         }
 
         .experience-item:last-child {
-            border-bottom: 1px solid #e5e7eb;
+            border-bottom: 1px solid var(--border);
         }
 
         .experience-date {
-            color: #6b7280;
-            font-size: 0.9rem;
-        }
-
-        .experience-location {
-            color: #9ca3af;
-            font-size: 0.85rem;
-            margin-top: 4px;
-        }
-
-        .experience-content h3 {
-            color: #111827;
-            font-size: 1.3rem;
-            margin-bottom: 4px;
+            color: var(--muted);
+            font-size: 14px;
         }
 
         .experience-company {
-            color: #2563eb;
-            font-weight: 600;
-            margin-bottom: 15px;
-        }
-
-        .experience-content ul {
-            padding-left: 20px;
-            color: #4b5563;
-        }
-
-        .experience-content li {
-            margin-bottom: 8px;
-        }
-
-
-        /* =========================
-           SKILLS
-        ========================= */
-
-        .skills {
-            background: #f9fafb;
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-        }
-
-        .skill-category {
-            background: #ffffff;
-            border: 1px solid #e5e7eb;
-            border-radius: 8px;
-            padding: 25px;
-        }
-
-        .skill-category h3 {
-            color: #111827;
-            font-size: 1.05rem;
-            margin-bottom: 12px;
-        }
-
-        .skill-category p {
-            color: #6b7280;
-            font-size: 0.95rem;
-        }
-
-
-        /* =========================
-           PROJECTS
-        ========================= */
-
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 22px;
-        }
-
-        .project-card {
-            border: 1px solid #e5e7eb;
-            border-radius: 8px;
-            padding: 28px;
-
-            background: #ffffff;
-
-            transition:
-                transform 0.2s ease,
-                box-shadow 0.2s ease,
-                border-color 0.2s ease;
-        }
-
-        .project-card:hover {
-            transform: translateY(-4px);
-            border-color: #bfdbfe;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
-        }
-
-        .project-icon {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-        }
-
-        .project-card h3 {
-            color: #111827;
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-        }
-
-        .project-card p {
-            color: #6b7280;
-            font-size: 0.95rem;
-            margin-bottom: 18px;
-        }
-
-        .project-tech {
-            color: #2563eb;
-            font-size: 0.85rem;
-            font-weight: 600;
-            margin-bottom: 18px;
-        }
-
-        .project-link {
-            color: #2563eb;
-            font-size: 0.9rem;
-            font-weight: 600;
-        }
-
-        .project-link:hover {
-            text-decoration: underline;
-        }
-
-
-        /* =========================
-           EDUCATION
-        ========================= */
-
-        .education {
-            background: #f9fafb;
-        }
-
-        .education-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 22px;
-        }
-
-        .education-card {
-            background: #ffffff;
-            border: 1px solid #e5e7eb;
-            border-radius: 8px;
-            padding: 28px;
-        }
-
-        .education-card h3 {
-            color: #111827;
+            font-family: "Playfair Display", serif;
+            font-size: 28px;
             margin-bottom: 5px;
         }
 
-        .education-card .institution {
-            color: #2563eb;
-            font-weight: 600;
-            margin-bottom: 8px;
-        }
-
-        .education-card p {
-            color: #6b7280;
-        }
-
-
-        /* =========================
-           CONTACT
-        ========================= */
-
-        .contact {
-            text-align: center;
-            padding: 100px 0;
-        }
-
-        .contact .section-title {
+        .experience-role {
+            color: var(--accent);
+            font-size: 15px;
             margin-bottom: 15px;
         }
 
-        .contact-description {
-            color: #6b7280;
-            max-width: 600px;
-            margin: 0 auto 30px;
+        .experience-description {
+            color: #596159;
+            font-size: 15px;
+        }
+
+        /* Skills */
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            max-width: 760px;
+        }
+
+        .skill {
+            border: 1px solid var(--border);
+            padding: 10px 16px;
+            font-size: 14px;
+            background: rgba(255,255,255,0.35);
+        }
+
+        /* Projects */
+
+        .project {
+            padding: 35px 0;
+            border-top: 1px solid var(--border);
+        }
+
+        .project:last-child {
+            border-bottom: 1px solid var(--border);
+        }
+
+        .project-title {
+            font-family: "Playfair Display", serif;
+            font-size: 29px;
+            margin-bottom: 8px;
+        }
+
+        .project-tech {
+            color: var(--accent);
+            font-size: 13px;
+            margin-bottom: 15px;
+        }
+
+        .project-description {
+            color: #596159;
+            max-width: 700px;
+            font-size: 15px;
+        }
+
+        /* Education */
+
+        .education-item {
+            padding: 25px 0;
+            border-top: 1px solid var(--border);
+        }
+
+        .education-degree {
+            font-family: "Playfair Display", serif;
+            font-size: 25px;
+        }
+
+        .education-school {
+            color: var(--accent);
+            margin-top: 5px;
+        }
+
+        /* Contact */
+
+        .contact-box {
+            padding: 45px 0 20px;
         }
 
         .contact-links {
             display: flex;
-            justify-content: center;
-            gap: 14px;
             flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 25px;
         }
 
+        .contact-link {
+            color: var(--accent);
+            border-bottom: 1px solid #b9c8c0;
+            padding-bottom: 3px;
+        }
 
-        /* =========================
-           FOOTER
-        ========================= */
+        .contact-link:hover {
+            border-color: var(--accent);
+        }
+
+        /* Footer */
 
         footer {
-            border-top: 1px solid #e5e7eb;
-            padding: 25px 0;
-            text-align: center;
-            color: #9ca3af;
-            font-size: 0.85rem;
+            border-top: 1px solid var(--border);
+            padding: 30px 0;
+            color: var(--muted);
+            font-size: 13px;
         }
 
+        /* Mobile */
 
-        /* =========================
-           MOBILE
-        ========================= */
+        @media (max-width: 700px) {
 
-        @media (max-width: 800px) {
+            .nav-inner {
+                align-items: flex-start;
+                gap: 20px;
+            }
 
             .nav-links {
                 display: none;
             }
 
             .hero {
-                padding: 90px 0 75px;
+                padding: 75px 0 60px;
             }
 
-            .hero h1 {
-                font-size: 3rem;
-                letter-spacing: -1px;
+            h1 {
+                font-size: 58px;
             }
 
-            .facts-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 20px;
+            .intro {
+                font-size: 18px;
+                margin-top: 40px;
             }
 
-            .fact {
+            .stats {
+                grid-template-columns: 1fr;
+            }
+
+            .stat {
                 border-right: none;
-                padding: 10px 0;
+                border-bottom: 1px solid var(--border);
+            }
+
+            .stat:last-child {
+                border-bottom: none;
+            }
+
+            section {
+                padding: 65px 0;
+            }
+
+            .section-title {
+                font-size: 38px;
             }
 
             .experience-item {
                 grid-template-columns: 1fr;
-                gap: 10px;
+                gap: 8px;
             }
 
-            .skills-grid,
-            .projects-grid,
-            .education-grid {
-                grid-template-columns: 1fr;
-            }
-
-            section {
-                padding: 70px 0;
-            }
-        }
-
-
-        @media (max-width: 500px) {
-
-            .facts-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero h2 {
-                font-size: 1.35rem;
-            }
-
-            .button {
-                width: 100%;
-                text-align: center;
+            .contact-links {
+                flex-direction: column;
+                gap: 15px;
             }
         }
     </style>
 </head>
 
-
 <body>
 
-    <!-- =========================
-         NAVIGATION
-    ========================== -->
+    <!-- Navigation -->
 
     <nav>
-        <div class="container nav-container">
+        <div class="container nav-inner">
 
-            <a href="#home" class="logo">
+            <div class="logo">
                 Sai Manogna Potluri
-            </a>
+            </div>
 
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#education">Education</a>
+            </div>
 
         </div>
     </nav>
 
 
-    <!-- =========================
-         HERO
-    ========================== -->
+    <!-- Hero -->
 
-    <section id="home" class="hero">
-
-        <div class="container hero-content">
-
-            <div class="hero-label">
-                QA AUTOMATION ENGINEER
-            </div>
-
-            <h1>
-                Sai Manogna Potluri
-            </h1>
-
-            <h2>
-                Building reliable software through intelligent test automation.
-            </h2>
-
-            <p class="hero-description">
-                QA Automation Engineer with 9+ years of experience in
-                software testing and automation. I specialize in
-                Playwright, TypeScript, Selenium, API testing and CI/CD,
-                with a focus on building maintainable and scalable
-                automation solutions.
-            </p>
-
-            <div class="hero-buttons">
-
-                <a href="#experience" class="button button-primary">
-                    View Experience
-                </a>
-
-                <a
-                    href="https://github.com/saimanognapotluri"
-                    target="_blank"
-                    class="button button-secondary"
-                >
-                    GitHub
-                </a>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         QUICK FACTS
-    ========================== -->
-
-    <div class="quick-facts">
+    <main>
 
         <div class="container">
 
-            <div class="facts-grid">
+            <section class="hero" style="border-top: none;">
 
-                <div class="fact">
-                    <span class="fact-number">9+</span>
-                    <span class="fact-label">Years Experience</span>
+                <div class="eyebrow">
+                    Quality Assurance · Test Automation
                 </div>
 
-                <div class="fact">
-                    <span class="fact-number">Playwright</span>
-                    <span class="fact-label">UI Automation</span>
+                <h1>
+                    Sai Manogna<br>
+                    Potluri
+                </h1>
+
+                <div class="role">
+                    QA Automation Engineer
                 </div>
 
-                <div class="fact">
-                    <span class="fact-number">API</span>
-                    <span class="fact-label">Test Automation</span>
+                <div class="location">
+                    Germany
                 </div>
 
-                <div class="fact">
-                    <span class="fact-number">ISTQB</span>
-                    <span class="fact-label">Certified</span>
+                <div class="intro">
+                    A QA Automation Engineer with 9+ years of experience
+                    in software testing and automation, focused on building
+                    reliable, maintainable and scalable test automation
+                    solutions across UI, API and CI/CD environments.
+                </div>
+
+            </section>
+
+
+            <!-- Stats -->
+
+            <div class="stats">
+
+                <div class="stat">
+                    <span class="stat-label">Experience</span>
+                    <span class="stat-value">9+ yrs</span>
+                </div>
+
+                <div class="stat">
+                    <span class="stat-label">Automation</span>
+                    <span class="stat-value">Playwright</span>
+                </div>
+
+                <div class="stat">
+                    <span class="stat-label">Focus</span>
+                    <span class="stat-value">Quality</span>
                 </div>
 
             </div>
 
-        </div>
 
-    </div>
+            <!-- About -->
 
+            <section id="about">
 
-    <!-- =========================
-         ABOUT
-    ========================== -->
+                <div class="section-label">
+                    01 · About
+                </div>
 
-    <section id="about" class="about">
+                <h2 class="section-title">
+                    Building quality into software.
+                </h2>
 
-        <div class="container">
-
-            <div class="section-label">
-                About
-            </div>
-
-            <h2 class="section-title">
-                About Me
-            </h2>
-
-            <div class="about-content">
-
-                <p>
+                <p class="section-text">
                     I am a QA Automation Engineer with extensive experience
-                    in designing, developing and maintaining automated test
-                    solutions for web applications and APIs.
+                    designing and implementing automated testing solutions
+                    for web applications and APIs. My work spans test
+                    automation, functional testing, API validation, CI/CD
+                    integration and Agile delivery.
+                    <br><br>
+                    I enjoy creating automation frameworks that are reliable,
+                    maintainable and easy for development and QA teams to use.
+                    I am particularly interested in modern browser automation
+                    with Playwright and TypeScript.
                 </p>
 
-                <p>
-                    My automation experience includes Playwright with
-                    TypeScript and Selenium with Java. I have worked across
-                    functional testing, regression testing, API testing,
-                    integration testing and continuous testing.
-                </p>
-
-                <p>
-                    I enjoy creating reusable automation frameworks,
-                    improving test execution efficiency and working closely
-                    with development and product teams to improve software
-                    quality.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
+            </section>
 
 
-    <!-- =========================
-         EXPERIENCE
-    ========================== -->
+            <!-- Experience -->
 
-    <section id="experience">
+            <section id="experience">
 
-        <div class="container">
+                <div class="section-label">
+                    02 · Experience
+                </div>
 
-            <div class="section-label">
-                Career
-            </div>
+                <h2 class="section-title">
+                    Experience
+                </h2>
 
-            <h2 class="section-title">
-                Experience
-            </h2>
 
-            <!-- Current Role -->
+                <div class="experience-item">
 
-            <div class="experience-item">
-
-                <div>
                     <div class="experience-date">
-                        2026 – Present
+                        2025 – Present
                     </div>
 
-                    <div class="experience-location">
-                        Germany
+                    <div>
+                        <div class="experience-company">
+                            Finoa
+                        </div>
+
+                        <div class="experience-role">
+                            Senior Test Automation Engineer
+                        </div>
+
+                        <div class="experience-description">
+                            Built and enhanced automated testing solutions
+                            using Playwright and TypeScript. Worked across
+                            UI automation, API testing and CI/CD pipelines,
+                            with a focus on improving automation coverage,
+                            execution speed and maintainability.
+                        </div>
                     </div>
-                </div>
-
-                <div class="experience-content">
-
-                    <h3>
-                        QA Automation Engineer
-                    </h3>
-
-                    <div class="experience-company">
-                        QA Automation & Test Engineering
-                    </div>
-
-                    <ul>
-
-                        <li>
-                            Develop and maintain automated UI tests using
-                            Playwright and TypeScript.
-                        </li>
-
-                        <li>
-                            Work with modern automation frameworks,
-                            reusable test components and automated
-                            regression suites.
-                        </li>
-
-                        <li>
-                            Collaborate with development and QA teams to
-                            identify defects and improve test coverage.
-                        </li>
-
-                        <li>
-                            Contribute to continuous testing and CI/CD
-                            practices.
-                        </li>
-
-                    </ul>
 
                 </div>
 
-            </div>
 
+                <div class="experience-item">
 
-            <!-- Finoa -->
-
-            <div class="experience-item">
-
-                <div>
                     <div class="experience-date">
-                        Previous Experience
+                        2024 – 2026
                     </div>
 
-                    <div class="experience-location">
-                        FinTech
+                    <div>
+                        <div class="experience-company">
+                            University / Enterprise Systems
+                        </div>
+
+                        <div class="experience-role">
+                            Senior Programmer Analyst
+                        </div>
+
+                        <div class="experience-description">
+                            Supported enterprise applications, integrations,
+                            SQL-based solutions and system upgrades.
+                            Worked with business and technical teams to
+                            troubleshoot issues, validate changes and
+                            document technical processes.
+                        </div>
                     </div>
-                </div>
-
-                <div class="experience-content">
-
-                    <h3>
-                        Senior Test Automation Engineer
-                    </h3>
-
-                    <div class="experience-company">
-                        Finoa GmbH
-                    </div>
-
-                    <ul>
-
-                        <li>
-                            Built and maintained automated end-to-end
-                            testing solutions using Playwright and
-                            TypeScript.
-                        </li>
-
-                        <li>
-                            Worked on migrating Selenium-based automation
-                            to a modern Playwright automation framework.
-                        </li>
-
-                        <li>
-                            Automated critical application workflows and
-                            supported regression testing.
-                        </li>
-
-                        <li>
-                            Worked with API testing, test data,
-                            debugging and CI/CD processes.
-                        </li>
-
-                        <li>
-                            Improved automation efficiency and reduced
-                            manual testing effort through automation.
-                        </li>
-
-                    </ul>
 
                 </div>
 
-            </div>
 
+                <div class="experience-item">
 
-            <!-- Earlier Experience -->
-
-            <div class="experience-item">
-
-                <div>
                     <div class="experience-date">
-                        Earlier Experience
+                        2025 – 2026
                     </div>
 
-                    <div class="experience-location">
-                        Software Testing
-                    </div>
-                </div>
-
-                <div class="experience-content">
-
-                    <h3>
-                        QA / Test Automation Engineer
-                    </h3>
-
-                    <div class="experience-company">
-                        Software Testing & Automation
-                    </div>
-
-                    <ul>
-
-                        <li>
-                            Developed automated test cases using
-                            Selenium, Java, TestNG and Cucumber.
-                        </li>
-
-                        <li>
-                            Performed functional, regression and
-                            integration testing.
-                        </li>
-
-                        <li>
-                            Created reusable automation components and
-                            maintained automated regression suites.
-                        </li>
-
-                        <li>
-                            Worked with SQL and application data
-                            validation as part of testing activities.
-                        </li>
-
-                    </ul>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         SKILLS
-    ========================== -->
-
-    <section id="skills" class="skills">
-
-        <div class="container">
-
-            <div class="section-label">
-                Expertise
-            </div>
-
-            <h2 class="section-title">
-                Technical Skills
-            </h2>
-
-            <div class="skills-grid">
-
-                <div class="skill-category">
-
-                    <h3>
-                        Test Automation
-                    </h3>
-
-                    <p>
-                        Playwright · TypeScript · Selenium · Java ·
-                        TestNG · Cucumber · Appium
-                    </p>
-
-                </div>
-
-
-                <div class="skill-category">
-
-                    <h3>
-                        API Testing
-                    </h3>
-
-                    <p>
-                        REST API Testing · REST Assured · Postman ·
-                        Swagger · API Automation
-                    </p>
-
-                </div>
-
-
-                <div class="skill-category">
-
-                    <h3>
-                        CI/CD & DevOps
-                    </h3>
-
-                    <p>
-                        Git · GitHub · GitLab CI/CD · Jenkins ·
-                        Docker
-                    </p>
-
-                </div>
-
-
-                <div class="skill-category">
-
-                    <h3>
-                        Testing Practices
-                    </h3>
-
-                    <p>
-                        Functional Testing · Regression Testing ·
-                        Integration Testing · BDD · Agile · Shift-Left Testing
-                    </p>
-
-                </div>
-
-
-                <div class="skill-category">
-
-                    <h3>
-                        Database & Data
-                    </h3>
-
-                    <p>
-                        SQL · PostgreSQL · Oracle · Database Validation
-                    </p>
-
-                </div>
-
-
-                <div class="skill-category">
-
-                    <h3>
-                        Tools
-                    </h3>
-
-                    <p>
-                        Jira · Confluence · GitHub · Jenkins ·
-                        Postman · JMeter
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         PROJECTS
-    ========================== -->
-
-    <section id="projects">
-
-        <div class="container">
-
-            <div class="section-label">
-                Featured Work
-            </div>
-
-            <h2 class="section-title">
-                Projects
-            </h2>
-
-            <p class="section-intro">
-                A selection of automation projects demonstrating my
-                experience with modern testing frameworks and tools.
-            </p>
-
-
-            <div class="projects-grid">
-
-
-                <!-- Project 1 -->
-
-                <div class="project-card">
-
-                    <div class="project-icon">
-                        🎭
+                    <div>
+                        <div class="experience-company">
+                            Future Vision 360 · HSBC
+                        </div>
+
+                        <div class="experience-role">
+                            Scrum Master / Technology Consultant
+                        </div>
+
+                        <div class="experience-description">
+                            Supported mortgage technology projects,
+                            coordinating Agile delivery, requirements,
+                            testing activities and collaboration between
+                            technical and business stakeholders.
+                        </div>
                     </div>
 
-                    <h3>
-                        Playwright TypeScript Automation
-                    </h3>
+                </div>
 
-                    <p>
-                        A modern UI automation project demonstrating
-                        Playwright with TypeScript, reusable test
-                        components, page objects and automated
-                        regression testing.
-                    </p>
+            </section>
+
+
+            <!-- Skills -->
+
+            <section id="skills">
+
+                <div class="section-label">
+                    03 · Expertise
+                </div>
+
+                <h2 class="section-title">
+                    Tools & technologies
+                </h2>
+
+                <div class="skills">
+
+                    <span class="skill">Playwright</span>
+                    <span class="skill">TypeScript</span>
+                    <span class="skill">JavaScript</span>
+                    <span class="skill">Selenium</span>
+                    <span class="skill">Java</span>
+                    <span class="skill">TestNG</span>
+                    <span class="skill">Cucumber</span>
+                    <span class="skill">API Testing</span>
+                    <span class="skill">REST Assured</span>
+                    <span class="skill">Postman</span>
+                    <span class="skill">GitLab CI/CD</span>
+                    <span class="skill">Jenkins</span>
+                    <span class="skill">Docker</span>
+                    <span class="skill">SQL</span>
+                    <span class="skill">PostgreSQL</span>
+                    <span class="skill">Oracle</span>
+                    <span class="skill">JIRA</span>
+                    <span class="skill">Confluence</span>
+
+                </div>
+
+            </section>
+
+
+            <!-- Projects -->
+
+            <section id="projects">
+
+                <div class="section-label">
+                    04 · Selected Work
+                </div>
+
+                <h2 class="section-title">
+                    Projects
+                </h2>
+
+
+                <div class="project">
+
+                    <div class="project-title">
+                        Playwright Automation Framework
+                    </div>
 
                     <div class="project-tech">
-                        Playwright · TypeScript · POM
+                        Playwright · TypeScript · CI/CD
+                    </div>
+
+                    <div class="project-description">
+                        Designed and implemented a maintainable browser
+                        automation framework using Playwright and TypeScript,
+                        including reusable test components, reliable
+                        locators and automated execution.
                     </div>
 
                 </div>
 
 
-                <!-- Project 2 -->
+                <div class="project">
 
-                <div class="project-card">
-
-                    <div class="project-icon">
-                        🥒
-                    </div>
-
-                    <h3>
+                    <div class="project-title">
                         Cucumber Java E2E
-                    </h3>
-
-                    <p>
-                        End-to-end test automation using Selenium,
-                        Java and Cucumber with reusable page objects
-                        and BDD scenarios.
-                    </p>
-
-                    <div class="project-tech">
-                        Selenium · Java · Cucumber · TestNG
                     </div>
 
-                    <a
-                        href="https://github.com/saimanognapotluri/CucumberJavaE2E"
-                        target="_blank"
-                        class="project-link"
-                    >
-                        View Repository →
-                    </a>
-
-                </div>
-
-
-                <!-- Project 3 -->
-
-                <div class="project-card">
-
-                    <div class="project-icon">
-                        🔌
+                    <div class="project-tech">
+                        Java · Selenium · Cucumber · TestNG
                     </div>
 
-                    <h3>
-                        API Testing Automation
-                    </h3>
-
-                    <p>
-                        API testing project covering functional,
-                        negative and data validation scenarios for
-                        REST APIs.
-                    </p>
-
-                    <div class="project-tech">
-                        REST Assured · Postman · JSON · API
+                    <div class="project-description">
+                        End-to-end automation project demonstrating
+                        behaviour-driven testing with reusable step
+                        definitions and automated browser validation.
                     </div>
 
                 </div>
 
 
-                <!-- Project 4 -->
+                <div class="project">
 
-                <div class="project-card">
-
-                    <div class="project-icon">
-                        ⚙️
+                    <div class="project-title">
+                        API Testing
                     </div>
 
-                    <h3>
-                        CI/CD Test Automation
-                    </h3>
-
-                    <p>
-                        Continuous testing workflow demonstrating
-                        automated execution of test suites as part
-                        of a CI/CD pipeline.
-                    </p>
-
                     <div class="project-tech">
-                        Git · CI/CD · Automated Testing
+                        REST Assured · Postman
+                    </div>
+
+                    <div class="project-description">
+                        API testing examples covering request validation,
+                        response assertions, negative scenarios and
+                        automated service-level testing.
                     </div>
 
                 </div>
 
-            </div>
-
-        </div>
-
-    </section>
+            </section>
 
 
-    <!-- =========================
-         EDUCATION
-    ========================== -->
+            <!-- Education -->
 
-    <section id="education" class="education">
+            <section id="education">
 
-        <div class="container">
+                <div class="section-label">
+                    05 · Education
+                </div>
 
-            <div class="section-label">
-                Background
-            </div>
-
-            <h2 class="section-title">
-                Education & Certification
-            </h2>
-
-            <div class="education-grid">
+                <h2 class="section-title">
+                    Education
+                </h2>
 
 
-                <div class="education-card">
+                <div class="education-item">
 
-                    <h3>
+                    <div class="education-degree">
                         Master of Science in Management Information Systems
-                    </h3>
+                    </div>
 
-                    <div class="institution">
+                    <div class="education-school">
                         University at Buffalo
                     </div>
 
-                    <p>
-                        Graduate degree focused on information systems,
-                        technology and business processes.
-                    </p>
-
                 </div>
 
 
-                <div class="education-card">
+                <div class="education-item">
 
-                    <h3>
-                        ISTQB Foundation Level
-                    </h3>
-
-                    <div class="institution">
-                        ISTQB
+                    <div class="education-degree">
+                        ISTQB Foundation
                     </div>
 
-                    <p>
-                        Foundation-level certification in software
-                        testing principles and practices.
-                    </p>
+                    <div class="education-school">
+                        Certified Software Testing Professional
+                    </div>
 
                 </div>
 
-            </div>
+            </section>
+
+
+            <!-- Contact -->
+
+            <section id="contact">
+
+                <div class="section-label">
+                    06 · Contact
+                </div>
+
+                <div class="contact-box">
+
+                    <h2 class="section-title">
+                        Let's connect.
+                    </h2>
+
+                    <p class="section-text">
+                        Interested in discussing QA automation,
+                        software quality, or potential opportunities?
+                    </p>
+
+                    <div class="contact-links">
+
+                        <a class="contact-link"
+                           href="https://github.com/saimanognapotluri"
+                           target="_blank">
+                            GitHub →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </section>
 
         </div>
 
-    </section>
+    </main>
 
-
-    <!-- =========================
-         CONTACT
-    ========================== -->
-
-    <section id="contact" class="contact">
-
-        <div class="container">
-
-            <div class="section-label">
-                Contact
-            </div>
-
-            <h2 class="section-title">
-                Let's Connect
-            </h2>
-
-            <p class="contact-description">
-                I'm open to opportunities in QA Automation,
-                Test Engineering and Software Quality.
-            </p>
-
-            <div class="contact-links">
-
-                <a
-                    href="https://github.com/saimanognapotluri"
-                    target="_blank"
-                    class="button button-secondary"
-                >
-                    GitHub
-                </a>
-
-                <a
-                    href="https://www.linkedin.com/in/sai-manogna-potluri-089418a6/"
-                    target="_blank"
-                    class="button button-secondary"
-                >
-                    LinkedIn
-                </a>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         FOOTER
-    ========================== -->
 
     <footer>
 
         <div class="container">
-
-            © 2026 Sai Manogna Potluri · QA Automation Engineer
-
+            © 2026 Sai Manogna Potluri
         </div>
 
     </footer>
-
 
 </body>
 </html>
